@@ -14,13 +14,7 @@ pipeline {
       }
     }
 
-    stage('Build (Node)') {
-      steps {
-        sh 'npm install'
-        sh 'npm run build'
-      }
-    }
-
+   
     stage('Docker Build') {
       steps {
         // SECURELY retrieve the GitHub Token from Jenkins Credentials
